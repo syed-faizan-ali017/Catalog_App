@@ -2,7 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:travel/pages/homepage.dart';
 import 'package:travel/utilis/routes.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  String name = "";
+  bool changeButton = false;
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -13,13 +21,13 @@ class LoginPage extends StatelessWidget {
             Image.asset(
               "assets/images/login_img.png",
               fit: BoxFit.cover,
-              height: 500,
+              // height: 300,
             ),
             SizedBox(
               height: 20.0,
             ),
             Text(
-              "Welcome! Login",
+              "Welcome $name ",
               style: TextStyle(
                 fontSize: 24,
                 color: Colors.black,
@@ -45,13 +53,16 @@ class LoginPage extends StatelessWidget {
                         prefixIcon: Icon(Icons.email),
                         border: OutlineInputBorder(),
                       ),
-                      onChanged: (String value) {},
+                      onChanged: (String value) {
+                        name = value;
+                        setState(() {});
+                      },
                       validator: (value) {
                         return value!.isEmpty ? 'Please enter email' : null;
                       },
                     ),
                     SizedBox(
-                      height: 30,
+                      height: 20,
                     ),
                     TextFormField(
                       obscureText: true,
@@ -68,31 +79,56 @@ class LoginPage extends StatelessWidget {
                       },
                     ),
                     SizedBox(
-                      height: 40,
+                      height: 30,
                     ),
 
-                    //Button login
-                    // ElevatedButton(
-                    // child: Text('Login'),
-                    // style: TextButton.styleFrom(
-                    // minimumSize: Size),
-                    //   onPressed: () {
-                    //print("Welcome Back Faizan");
-                    //    },
-                    // ),
+                    InkWell(
+                      onTap: () async {
+                        setState(() {
+                          changeButton = true;
+                        });
 
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 30),
-                      child: ElevatedButton(
-                        child: Text("Login"),
-                        style: TextButton.styleFrom(minimumSize: Size(150, 40)),
-                        //minWidth: double.infinity,
-                        onPressed: () {
-                          Navigator.pushNamed(context, MyRoutes.homeRoute);
-                          //print("Welcome Back Faizan");
-                        },
+                        await Future.delayed(Duration(seconds: 1));
+                        Navigator.pushNamed(context, MyRoutes.homeRoute);
+                      },
+                      child: AnimatedContainer(
+                        duration: Duration(seconds: 1),
+                        width: changeButton ? 50 : 150,
+                        height: 50,
+                        alignment: Alignment.center,
+                        child: changeButton
+                            ? Icon(
+                                Icons.done,
+                                color: Colors.white,
+                              )
+                            : Text(
+                                "Login",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18),
+                              ),
+                        decoration: BoxDecoration(
+                            color: Colors.deepPurple,
+                            // shape: changeButton
+                            // ? BoxShape.circle : BoxShape.rectangle,
+                            borderRadius:
+                                BorderRadius.circular(changeButton ? 50 : 7)),
                       ),
                     )
+
+                    // Padding(
+                    //   padding: const EdgeInsets.symmetric(horizontal: 30),
+                    //child: ElevatedButton(
+                    // child: Text("Login"),
+                    // style: TextButton.styleFrom(minimumSize: Size(150, 40)),
+                    //minWidth: double.infinity,
+                    // onPressed: () {
+                    //   Navigator.pushNamed(context, MyRoutes.homeRoute);
+                    //print("Welcome Back Faizan");
+                    //  },
+                    // ),
+                    // )
                   ],
                 ),
               ),
