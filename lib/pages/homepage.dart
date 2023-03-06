@@ -12,7 +12,15 @@ class Homepage extends StatelessWidget {
           child: Text("Welcome to 30 days of flutter"),
         ),
       ),
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: Text("Sign in",
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+              backgroundColor: Colors.deepPurple,
+            )),
+      ),
     );
   }
 }
