@@ -7,6 +7,7 @@ class MyTheme {
       fontFamily: GoogleFonts.lato().fontFamily,
       primaryTextTheme: GoogleFonts.latoTextTheme(),
       appBarTheme: AppBarTheme(
+          
           color: Colors.white,
           elevation: 0.0,
           iconTheme: IconThemeData(color: Colors.black),
