@@ -10,7 +10,7 @@ class Homepage extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          child: Text("Welcome to 30 days of flutter"),
+          child: Text(context.runtimeType.toString()),
         ),
       ),
       drawer: MyDrawer(),

@@ -11,15 +11,12 @@ class MyDrawer extends StatelessWidget {
       child: Container(
         color: Colors.deepPurple,
         child: ListView(
+          padding: EdgeInsets.zero,
           children: [
             DrawerHeader(
-              padding: EdgeInsets.all(0),
+              padding: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(
-                margin: EdgeInsets.all(0),
-
-                // decoration: BoxDecoration(
-                //   color: Colors.w
-                //),
+                margin: EdgeInsets.zero,
 
                 accountName: Text(
                   "Faizan Ali",
