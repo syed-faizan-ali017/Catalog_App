@@ -1,0 +1,32 @@
+{
+    "products": [
+        {
+          "id": 1,
+          "name": "iPhone 12 Pro",
+          "desc": "Apple iPhone 12",
+          "price": 999,
+          "color": "#33505a",
+          "image": "assets/images/iphone.jpg"
+
+        },
+
+        {
+            "id": 2,
+            "name": "iPhone 14",
+            "desc": "Apple iPhone 12",
+            "price": 999,
+            "color": "#33505a",
+            "image": "assets/images/iphone.jpg"
+        },
+
+        {
+            "id": 1,
+          "name": "Pixel 5",
+          "desc": "Google Pixel Phone 12 Generation",
+          "price": 699,
+          "color": "#33505a",
+          "image": "assets/images/iphone.jpg"
+        }
+        
+      ]
+}
