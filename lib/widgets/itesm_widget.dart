@@ -11,7 +11,7 @@ class ItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 1.0,
+      elevation: 1.5,
       child: ListTile(
         onTap: () {
           print("${item.name} pressed");
@@ -21,6 +21,7 @@ class ItemWidget extends StatelessWidget {
         subtitle: Text(item.desc),
         trailing: Text("\$${item.price}",
             textScaleFactor: 1.5,
+
             // ignore: prefer_const_constructors
             style: TextStyle(
               color: Colors.deepPurple,

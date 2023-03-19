@@ -4,7 +4,7 @@
           "id": 1,
           "name": "iPhone 12 Pro",
           "desc": "Apple iPhone 12",
-          "price": 999,
+          "price": 6999,
           "color": "#33505a",
           "image": "assets/images/iphone.jpg"
 
@@ -13,20 +13,48 @@
         {
             "id": 2,
             "name": "iPhone 14",
-            "desc": "Apple iPhone 12",
-            "price": 999,
+            "desc": "Apple iPhone 14",
+            "price": 1099,
             "color": "#33505a",
-            "image": "assets/images/iphone.jpg"
+            "image": "assets/images/iphone14.jpg"
         },
 
         {
-            "id": 1,
+            "id": 3,
           "name": "Pixel 5",
           "desc": "Google Pixel Phone 12 Generation",
-          "price": 699,
+          "price": 2699,
           "color": "#33505a",
-          "image": "assets/images/iphone.jpg"
-        }
+          "image": "assets/images/pixel5.jpg"
+        },
+
+        {
+          "id": 4,
+          "name": "Samsung Galaxy S5",
+          "desc": "Samsung S Series",
+          "price": 2699,
+          "color": "#33505a",
+          "image": "assets/images/Samsung.jpg"
+        },
+
+        {
+          "id": 5,
+          "name": "Motorola",
+          "desc": "Motorola Mobiles",
+          "price": 2299,
+          "color": "#33505a",
+          "image": "assets/images/moto.jpg"
+      },
+
+      
+        {
+          "id": 6,
+          "name": "iPhone 14",
+          "desc": "Apple iPhone 12",
+          "price": 1299,
+          "color": "#33505a",
+          "image": "assets/images/iphone14.jpg"
+      }
         
       ]
 }
